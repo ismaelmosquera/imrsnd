@@ -76,9 +76,7 @@ for(int i = 0; i < ntracks; i++)
 			else
 			{
 				std::list<MIDIEvent*>::const_iterator aux = _track.begin();
-				aux++;
 while((*it)->GetTicks() > (*aux)->GetTicks()) aux++;
-if((*aux)->GetTicks() == (*it)->GetTicks() && (*aux)->IsTempoEvent()) aux++;
 _track.insert(aux, *it);
 			}
 		}
